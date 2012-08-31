@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <script src="Scripts/jquery-1.8.0.js"></script>
+  <script src="Scripts/jguide-0.0.2.js"></script>
+  <link href="Scripts/jguide.css" rel="stylesheet" />
+  <script>
+    $(function () {
+      var script = [
+        {
+          fieldSelector: '#a1',
+          fieldValue: {
+            value: 'Gib was ein!',
+            setValue: true,
+            effect: '',
+            flash: true,
+            human: true,
+            pause: 250,
+            event: ''
+          },
+          bubble: {
+            header: 'Stop',
+            content: 'Gib was ein!',
+            offset: {
+              x: 0 - $('#a1').width(),
+              y: 0
+            },
+            narrator: ''
+          },
+          action: {
+            afterDelay: 2500,
+            scriptCall: function () { },
+            startFlash: true,
+            endFlash: true
+          }
+        },
+        {
+          fieldSelector: '#a2',
+          fieldValue: {
+            value: 'Gib mehr ein!',
+            setValue: true,
+            effect: '',
+            flash: true,
+            human: true,
+            pause: 250,
+            event: ''
+          },
+          bubble: {
+            header: 'Stop',
+            content: 'Gib mehr ein!',
+            offset: {
+              x: 0 - $('#a1').width() / 2,
+              y: 0 + $('#a1').height() + 85
+            },
+            arrow: 'top',
+            narrator: ''
+          },
+          action: {
+            afterDelay: 5000,
+            scriptCall: function () { },
+            startFlash: true,
+            offFlash: true
+          }
+        },
+        {
+          fieldSelector: '#a3',
+          fieldValue: {
+            value: 'Gib noch mehr ein!',
+            setValue: true,
+            effect: '',
+            flash: true,
+            human: true,
+            pause: 250,
+            event: ''
+          },
+          bubble: {
+            header: 'Stop',
+            content: 'Gib noch mehr ein!',
+            offset: {
+              x: 0,
+              y: 45
+            },
+            arrow: 'none',
+            narrator: ''
+          },
+          action: {
+            afterDelay: 5000,
+            scriptCall: function () { $('#done').fadeIn('slow'); },
+            startFlash: true,
+            offFlash: true
+          }
+        }
+      ];
+      $().jguide(script);
+    });
+  </script>
+</head>
+<body>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <form action="Demo.html">
+    <div style="text-align: center">
+      <h3>Noch mehr Daten</h3>
+      <input type="text" id="a1" />
+      <input type="text" id="a2" />
+      <input type="text" id="a3" />
+    </div>
+  </form>
+  <h1 style="color: red; display: none;" id="done">FERTIG!</h1>
+</body>
+</html>
+

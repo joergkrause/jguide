@@ -1,0 +1,103 @@
+﻿.jguidebubble, .arrow:after, .arrowtop:after
+{
+  background: black;
+  border: 2px solid white;
+}
+
+.jguidebubble
+{
+  pointer-events: none;
+  display: inline-block;
+  position: absolute;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-align: center;
+  font: bold 14px "Segoe UI", Sans-Serif;
+  font-stretch: condensed;
+  text-decoration: none;
+  text-transform: uppercase;
+  box-shadow: 0 0 7px black;
+}
+
+.jguidecontent
+{
+  font: 12px "Segoe UI", Sans-Serif;
+  text-decoration: none;
+  text-transform: none;
+}
+
+.arrow
+{
+  width: 70px;
+  height: 16px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  bottom: -16px;
+}
+
+  .arrow:after
+  {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -20px;
+    width: 25px;
+    height: 25px;
+    -webkit-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+    -moz-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+    box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+
+.arrowtop
+{
+  width: 70px;
+  height: 32px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  margin-left: -35px;
+  top: -32px;
+}
+
+  .arrowtop:after
+  {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+    -webkit-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+    -moz-box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+    box-shadow: 6px 5px 9px -9px black, 5px 6px 9px -9px black;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+
+.jguideflash
+{
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  box-shadow: 0 0 12px red;
+}
+
+.jguidefieldflash
+{
+  border: 2px solid red;
+  box-shadow: 0 0 10px #9ecaed;
+  outline: none;
+  border-radius: 7px;
+  border-color: #9ecaed;
+}

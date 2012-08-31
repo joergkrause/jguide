@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title></title>
+  <script src="Scripts/jquery-1.8.0.js"></script>
+  <script src="Scripts/jguide-0.0.2.js"></script>
+  <link href="Scripts/jguide.css" rel="stylesheet" />
+  <script>
+    function callBackTest() {
+      alert('War diese Demo soweit okay?');
+    }
+    var script = [
+        {
+          fieldSelector: '#a1',
+          fieldValue: {
+            value: 'My Name',
+            setValue: true,
+            effect: '',
+            flash: true,
+            human: true,
+            pause: 250,
+            event: ''
+          },
+          bubble: {
+            header: 'Hilfe',
+            content: 'Keine Sorge, Hilfe naht...',
+            offset: {
+              x: 0,
+              y: 0
+            },
+            narrator: 'Content/Wav1.mp3'
+          },
+          action: {
+            afterDelay: 2500,
+            scriptCall: function () { },
+            startFlash: true,
+            endFlash: true
+          }
+        },
+        {
+          fieldSelector: '#a2',
+          fieldValue: {
+            value: 'Test 2',
+            setValue: true,
+            effect: '',
+            flash: true,
+            human: true,
+            pause: 250,
+            event: ''
+          },
+          bubble: {
+            header: 'Zweites Feld',
+            content: 'Hier kommt noch mehr in das Feld',
+            offset: {
+              x: 0,
+              y: 0
+            },
+            narrator: ''
+          },
+          action: {
+            afterDelay: 5000,
+            scriptCall: function () { },
+            startFlash: true,
+            offFlash: true
+          }
+        },
+        {
+          fieldSelector: '#a3',
+          fieldValue: {
+            value: 'Und 3 geht auch',
+            setValue: true,
+            effect: '',
+            flash: true,
+            human: true,
+            pause: 250,
+            event: ''
+          },
+          bubble: {
+            header: 'Drittes Feld',
+            content: 'Der dritte Bubble ist besonders kompliziert und braucht mehr text. <br>Manchmal ist es eben nicht so einfach.',
+            offset: {
+              x: 0,
+              y: 0
+            },
+            narrator: ''
+          },
+          action: {
+            afterDelay: 5000,
+            scriptCall: function () { callBackTest(); },
+            startFlash: true,
+            offFlash: true
+          }
+        },
+        {
+          fieldSelector: '#submitBtn',
+          fieldValue: {
+            setValue: false,
+            flash: false,
+            pause: 7250,
+            event: 'click'
+          },
+          bubble: {
+            header: 'Send',
+            content: 'Und jetzt wird die Seite gesendet<br>Und es geht zur Seite 2.',
+            offset: {
+              x: 0,
+              y: 0
+            },
+            narrator: ''
+          },
+          action: {
+            afterDelay: 7250,
+            scriptCall: function () { },
+            startFlash: true,
+            offFlash: false
+          }
+        }
+    ];
+    $(function () {
+      $().jguide(script);
+    });
+  </script>
+</head>
+<body>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <form action="Demo2.html">
+    <div style="text-align: center">
+      <h3>A1</h3>
+      <input type="text" id="a1" />
+      <h3>A2</h3>
+      <input type="text" id="a2" />
+      <h3>A3</h3>
+      <input type="text" id="a3" /><br />
+      <br />
+      <input type="submit" value="Next Page" id="submitBtn" />
+    </div>
+  </form>
+</body>
+</html>
+
